@@ -1,0 +1,31 @@
+<router-outlet></router-outlet>
+<h1>Ejercicio 01 - Yaggi Gustavo</h1>
+
+<label>Edad Uno:  </label>
+<input type="number" id="textEdadUno" [(ngModel)]="this.edadUno" >
+<br> <br>
+
+<label>Edad Dos:  </label>
+<input type="number" id="textEdadDos" [(ngModel)]="this.edadDos">
+<br> <br>
+
+<input type="button" (click)="this.CalcularSuma()" value="Calcular Suma">
+
+<label>   {{this.suma}}</label>
+<br> <br>
+<label *ngIf="this.Mostrar()">
+  Error: Por favor, ingrese números.
+</label>
+<br> <br>
+
+<input type="button" (click)="this.CalcularPromedio()" value="Calcular Promedio">
+
+<label>   {{this.promedio}}</label>
+<br> <br>
+
+<label *ngIf="this.Mostrar()">
+  Error: Por favor, ingrese números.
+</label>
+<br> <br>
+
+<input type="button" (click)="this.Limpiar()" value="Limpiar">
